@@ -1,0 +1,778 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: #f5f4f4;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+.navbar {
+  height: 60px;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(239, 237, 237);
+  box-shadow: 0 2px 5px rgba(93, 8, 8, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  opacity: 0.8;
+  backdrop-filter: blur(4px);
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 40px;
+}
+.logo a {
+  text-decoration: none;
+  color: #222222;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.logo .brand {
+  font-size: 36px;
+  font-weight: normal;
+}
+.logo .subtitle {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  color: #222222;
+  margin-left: 0px;
+  margin-top: -4px;
+  gap: 8px;
+  /* відстань між лінією та текстом */
+}
+.logo .subtitle::before,
+.logo .subtitle::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #bbb;
+  max-width: 30px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+  margin-right: 20px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #3b3b26;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links li a:visited {
+  color: #333;
+}
+.nav-links li a:hover {
+  color: #ff9500;
+}
+.separator {
+  width: 1px;
+  height: 18px;
+  background-color: #ccc;
+}
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background: url("images/fon.jpg") center center / cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  /* замість 60 */
+  margin: 0;
+}
+.hero-content {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  font-size: 100%;
+}
+.btn3 {
+  background-color: #ff6600; /* Основний колір */
+  color: #fff;
+  padding: 10px 16px;
+  margin-top: 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn3:hover {
+  background-color: #ff884d; /* Світліший при наведенні */
+  transform: scale(1.08);
+}
+
+.btn3 {
+  background-color: #ff6600; /* Основний колір */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn3:hover {
+  background-color: #ff884d; /* Світліший при наведенні */
+  transform: scale(1.08);
+}
+.btn {
+  display: inline-block;
+  width: 100%;
+  background-color: #ff6600;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #ffa775 !important;
+  transform: scale(1.05);
+}
+.footer p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.footer-links li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+  font-size: 14px;
+}
+.footer-links li a:hover {
+  color: #ff9500;
+}
+.products {
+  padding: 60px 20px;
+  background-color: #fefefe;
+  text-align: center;
+}
+.products h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+  gap: 16px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 20px 40px;
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.product-card img {
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+.product-card h3 {
+  font-size: 14px;
+  margin: 8px 0 2px;
+}
+
+.product-card p {
+  font-size: 12px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.product-card .btn {
+  margin-top: auto;
+  padding: 6px 14px;
+  background-color: #ff9500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.products-heading {
+  background-color: #f1f1f1;
+  /* колір фону */
+  padding: 6px 18px;
+  /* внутрішні відступи */
+  border-radius: 12px;
+  /* заокруглення */
+  display: inline-block;
+  /* щоб обгортка була навколо тексту */
+  box-shadow: 0 2px 5px rgba(7, 7, 7, 0.05);
+  /* легка тінь — опціонально */
+}
+
+.footer {
+  background-color: #f5f2f2;
+  padding: 20px 10px;
+  margin-top: 10px;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.footer-right {
+  font-size: 14px;
+  color: #666;
+}
+.footer-left p,
+.footer-right p {
+  margin: 4px 0;
+}
+.footer-left {
+  font-size: 12px;
+  color: #666;
+  margin-right: 50px;
+  /* ⬅️ Зміщує «Усі права захищені» праворуч */
+  text-align: right;
+}
+.footer-center {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 14px;
+  margin-left: 20px;
+  /* ⬅️ Зміщує контакти ліворуч */
+}
+.footer-links {
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer-links a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+  font-size: 14px;
+}
+.footer-links a:hover {
+  color: #ff9500;
+}
+
+.footer-right a {
+  color: #333;
+  /* або інший колір на твій смак */
+  text-decoration: none;
+  font-weight: 400;
+}
+.footer-right a:hover {
+  color: #ff9500;
+  /* колір при наведенні */
+  text-decoration: underline;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff3b3b;
+  color: white;
+  font-size: 14px; /* було 12px */
+  padding: 8px 12px; /* було 4px 8px */
+  border-radius: 6px;
+  font-weight: bold;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: block; /* <-- це забезпечує постійну видимість */
+}
+
+.price-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  justify-content: center;
+}
+
+.old-price {
+  color: #000; /* чорний текст */
+  text-decoration: line-through;
+  text-decoration-color: red; /* червона лінія перекреслення */
+  text-decoration-thickness: 1.5px; /* тонка лінія */
+  font-size: 16px;
+}
+
+.discount-badge {
+  background-color: #ffeaea;
+  color: #ff3b3b;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.new-price {
+  color: #ff3b3b;
+  font-size: 26px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.new-price sup {
+  font-size: 12px;
+  vertical-align: super;
+}
+
+.star-rating {
+  display: flex;
+  gap: 4px;
+  font-size: 20px;
+  color: #ccc;
+  cursor: pointer;
+  margin: 8px 0;
+  justify-content: center;
+}
+
+.star-rating .star:hover,
+.star-rating .star.hover,
+.star-rating .star.selected {
+  color: #ffd700; /* золота зірка */
+}
+
+.rating-text {
+  font-size: 14px;
+  color: #999;
+}
+
+.promo-countdown {
+  position: fixed;
+  top: 80px;
+  right: 2px;
+  background: rgba(224, 74, 74, 0.9);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+  z-index: 1000;
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  max-width: 280px;
+}
+
+.promo-text {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.timer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.time-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-box {
+  background-color: #333;
+  padding: 10px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  min-width: 36px;
+}
+
+.time-label {
+  font-size: 10px;
+  margin-top: 4px;
+  color: #f1f1f1;
+}
+
+.time-separator {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.stock-warning {
+  color: #000000;
+  font-weight: bold;
+  margin: 5px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px;
+    height: auto;
+    gap: 10px;
+    opacity: 1 !important;
+    backdrop-filter: none !important;
+    background-color: #f6f6f6 !important;
+  }
+
+
+  body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+  .logo {
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo .brand {
+    font-size: 20px;
+  }
+
+  
+
+  .nav-links li {
+    display: inline-block;
+    padding: 6px 0;
+  font-size: 16px;
+  }
+
+  .nav-links li a {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+
+  .separator {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    background: none !important;
+  }
+
+  .hero {
+    height: auto;
+    padding: 120px 10px 60px;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding: 20px;
+    font-size: 90%;
+  }
+
+  .btn3 {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .products {
+    padding: 40px 10px;
+  }
+
+  .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+  gap: 12px;
+  justify-content: center;
+}
+
+  .product-card {
+   padding: 10px;
+    margin: 6px;
+  }
+
+  .product-card img {
+    height: 90px;
+    margin-bottom: 4px; /* менше простору під картинкою */
+  }
+
+  .product-card h3 {
+    font-size: 14px;
+    margin: 2px 0; /* менше відступу зверху і знизу */
+  }
+
+  .star-rating {
+  margin: 4px 0;
+}
+
+  .product-card p {
+     font-size: 8px;
+  margin: 4px 0;
+  line-height: 1.3;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .stock-warning {
+    font-size: 12px;
+  }
+
+  .new-price {
+    font-size: 20px;
+  }
+
+  .promo-countdown {
+    top: unset;
+    bottom: 20px;
+    right: 10px;
+    left: 10px;
+    max-width: 90%;
+    width: calc(100% - 20px);
+   font-size: 12px;
+   padding: 8px;
+  }
+
+  .time-box {
+      font-size: 10px;
+    padding: 6px 8px;
+    min-width: 30px;
+  }
+
+  .time-label {
+      font-size: 8px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left, .footer-center, .footer-right {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .badge {
+    font-size: 12px;
+    padding: 4px 6px;
+    top: 6px;
+    left: 6px;
+  }
+
+  .price-wrapper {
+    margin-top: 20px; /* Зсуває ціну нижче бейджа */
+  }
+  .old-price {
+    font-size: 14px;
+  }
+
+  .discount-badge {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+
+}
+
+/* Стилі для випадаючого меню */
+
+.dropdown:hover {
+  display: block;
+}
+
+.burger-menu {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px;
+  user-select: none;
+}
+
+/* Показуємо бургер на мобільних */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: block;
+  }
+
+   .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #efefef; /* повністю непрозорий білий фон */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc; /* лінії між елементами */
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .dropdown-menu {
+    position: static;
+    display: none;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+}
+
+.promo-highlight {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  padding: 30px 10px 10px;
+}
+
+
+
+.main-offer.compact img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.main-offer.compact .main-title {
+  font-size: 16px;
+  margin: 8px 0 4px;
+}
+
+.main-offer.compact .price {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.main-offer.compact .old-price {
+  text-decoration: line-through;
+  color: gray;
+  margin-right: 6px;
+}
+
+.main-offer.compact .new-price {
+  color: #e60000;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.main-offer.compact .features {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 12px;
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.main-offer.compact .features li {
+  margin: 4px 0;
+}
+
+.main-offer.compact .btn {
+  display: inline-block;
+  background-color: #ff6600;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.main-offer.compact .btn:hover {
+  background-color: #ff7f32;
+}
+
+.main-offer.compact .stock-warning {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.stock-warning.red {
+  color: red;
+  font-weight: 600;
+}
+
+.main-offer.compact {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 500px;
+  margin: 0 auto 24px;
+  text-align: center;
+}
